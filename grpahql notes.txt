@@ -1,0 +1,20 @@
+GraphQL API with Java Spring Boot & Spring Framework
+
+
+Tool - Altair graphql client -- to test graphql api
+
+to change graphql default url to http://localhost:8080/graphql to http://localhost:8080/app-ui (add below in application properties)
+
+#by default /graphiql
+graphiql.mapping=/app-ui
+
+#by default /graphql
+graphql.servlet.mapping=/student-service
+
+
+Normally we use resolver by extending graphqlresolver
+but now we can use controller as resolver by mentioning that controller as @controller.
+and we need to use @querymapping (for graphql query) @mutationmapping (for graphql mutation)
+
+spring.graphql.graphiql.enabled = true  if u add this property then you will get http://localhost:9091/graphiql
+in postman http://localhost:9091/graphql use this to test.

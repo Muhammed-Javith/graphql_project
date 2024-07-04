@@ -1,0 +1,40 @@
+create orders:
+
+mutation{
+    createOrder(
+        address:"Madurai",
+        orderDetail:"Javith's order",
+        price:5000,
+        userId:3
+    ){
+        orderId
+        orderDetail
+
+    }
+}
+
+get all orders:
+
+	query{
+		getOrders{
+            address
+            orderDetail
+            orderId
+		}
+	}
+
+get single order
+
+	query{
+		getOrder(orderId:2){
+            address
+            orderDetail
+            orderId
+		}
+	}
+
+delete order:
+	
+	mutation{
+			deleteOrder(orderId:3)
+		}

@@ -1,0 +1,52 @@
+get all users:
+
+	query{
+		getUsers{
+			name
+			//add field that you want
+		}
+	}
+	
+create users:
+
+	mutation{
+		createUser(
+			name:"Muhammed Javith",
+			phone:"57783993",
+			email:"mj@gm.com",
+			password: "mj@57"
+		){
+			name,
+			userId
+		}
+	}
+
+getUser:
+
+	query{
+		getUser(userId:"1"){
+			name
+            phone
+            userId
+            email
+		}
+	}
+	
+update user:
+
+
+	mutation{
+		updateUser(
+            userId:3
+			name:"Muhammed Javith",
+			phone:"57783993",
+			email:"mjtj@gm.com",
+			password: "mj@57"
+		)
+	}
+	
+delete user:
+
+	mutation{
+        deleteUser(userId:8)
+	}
